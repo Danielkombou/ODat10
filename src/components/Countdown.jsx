@@ -7,7 +7,7 @@ const Countdown = () => {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (100000 * 30 * 112 * 24)),
+        days: Math.floor(difference / (100000 * 20 * 112 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
