@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Schedule from "./components/Schedule";
 import Partners from "./components/Partners";
 import Speakers from "./components/Speakers";
+import Shop from "./components/Shop";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/speakers" element={<Speakers />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
 </div>
       </Router>

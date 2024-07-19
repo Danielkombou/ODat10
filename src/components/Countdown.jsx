@@ -7,7 +7,7 @@ const Countdown = () => {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (100000 * 30 * 60 * 24)),
+        days: Math.floor(difference / (100000 * 30 * 112 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
@@ -38,7 +38,7 @@ const Countdown = () => {
   Object.keys(timeLeft).forEach((interval, index, array) => {
     timerComponents.push(
       <React.Fragment key={interval}>
-        <div className="p-2 md:p-4 bg-white shadow-md rounded text-center w-16 md:w-20">
+        <div className="p-1 md:p-4 bg-white shadow-md rounded text-center w-16 md:w-20">
           <div className="text-xl md:text-2xl font-bold text-blue-600">
             {timeLeft[interval]}
           </div>
