@@ -16,7 +16,7 @@ function Home() {
         </div>
         <div className="flex flex-col gap-4 p-4 mb-5 md:p-8 md:mb-0 bg-white shadow-lg rounded-lg text-center md:text-left mt-auto md:items-start">
     <Link className="text-base md:text-lg text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out underline">Register today and save your spot</Link>
-    <Link className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline">Order for a hoody</Link>
+    <Link to={"/shop"} className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline">Order for a hoody</Link>
 </div>
 
         {/* Content */}
@@ -37,8 +37,8 @@ function Home() {
           <Slider />
         </div>
         {/* Footer */}
-        <footer className="w-full p-4  text-center flex flex-col md:flex-row items-center justify-end">
-          <p className="font-semibold">Follow us on: </p>
+        <footer className="w-full p-4 gap-2 text-center flex flex-col md:flex-row items-center justify-end">
+          <p className="font-semibold">Follow us on:</p>
           <div className="flex items-center space-x-4 mt-2 md:mt-0">
             <Link href="#">
               <svg
