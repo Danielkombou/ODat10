@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Agenda from "./Agenda";
 
 function Schedule() {
   const [selected, setSelected] = useState(0);
