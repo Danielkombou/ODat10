@@ -19,4 +19,8 @@ export const navbarRoutes = [
     name: "Contact",
     path: "/contact",
   },
+  {
+    name: "Shop",
+    path: "/shop",
+  },
 ];
