@@ -37,8 +37,8 @@ function Home() {
           <Slider />
         </div>
         {/* Footer */}
-        <footer className="w-full p-4  text-center flex flex-col md:flex-row items-center justify-end">
-          <p className="font-semibold">Follow us on: </p>
+        <footer className="w-full p-4 gap-2 text-center flex flex-col md:flex-row items-center justify-end">
+          <p className="font-semibold">Follow us on:</p>
           <div className="flex items-center space-x-4 mt-2 md:mt-0">
             <Link href="#">
               <svg
