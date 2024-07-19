@@ -73,7 +73,7 @@ function Partners() {
         <Link
           to="https://www.open-dreams.org/"
           target="_blank"
-          className="bg-blue-600 lg:w-fit rounded-full  items-center
+          className="bg-blue-600 w-fit mx-auto lg:w-fit rounded-full  items-center
            justify-center lg:mx-auto flex  mt-6 py-3 px-10 text-white font-medium"
         >
           Become a partner
