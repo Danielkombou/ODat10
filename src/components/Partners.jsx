@@ -44,7 +44,7 @@ function Partners() {
             <img src={image6} className="w-40" alt="Partner 4" />
           </div>
 
-          <div className="grid grid-cols-2 p-4 md:grid-cols-3 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 mx-auto  p-4 md:grid-cols-3 lg:grid-cols-4 gap-10">
             <img src={image3} className="w-40" alt="Partner 5" />
             <img src={image8} className="w-40" alt="Partner 6" />
             <img src={image7} className="w-40" alt="Partner 7" />
