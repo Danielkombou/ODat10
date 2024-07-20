@@ -2,7 +2,7 @@ import React from "react";
 import { image14, image15, image16, image17, image18 } from "../assets/Images";
 
 function About() {
-  const myArray = [image14, image15, image16, image17];
+  const myArray = [image14,image15,image16,image17, image18]
   return (
     <div className="lg:flex gap-16">
       <div className="flex-1 flex-col flex gap-16 text-lg text-gray-700  w-full leading-7 lg:w-1/2 font-sans">

@@ -44,7 +44,7 @@ function Navbar() {
                 <Link
                   key={route.name}
                   to={route.path}
-                  className={`rounded p-1 relative ${
+                  className={`rounded p-2 relative ${
                     isActive &&
                     "before:absolute font-semibold before:left-0 before:bg-orange-500 before:bottom-0 before:h-1 before:w-full"
                   }`}
