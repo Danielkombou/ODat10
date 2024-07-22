@@ -31,11 +31,13 @@ function Partners() {
     image13,
   ];
   return (
-    <div className="">
+    <div className="pb-4">
       <div className="lg:flex flex-col font-sans">
-        <div className="m-3 p-3">
+        <div className="mb-6">
           <h1 className="text-gray-900 text-custom-32">Partners</h1>
         </div>
+
+        {/* Desktop view */}
         <div className="hidden gap-4 lg:gap-8 lg:grid">
           <div className="grid grid-cols-auto-fit-minmax md:grid-cols-4 gap-4">
             <img src={image2} className="w-40" alt="Partner 1" />
@@ -58,11 +60,12 @@ function Partners() {
             </div>
             <img src={image11} className="w-40" alt="Partner 10" />
           </div>
-          <div>
+          <div className="mt-4">
             <img src={image13} className="w-40" alt="Partner 11" />
           </div>
         </div>
 
+        {/* Mobile view */}
         <div className="grid lg:hidden grid-cols-2 gap-4">
           {images.map((image, index) => (
             <div className="flex items-center justify-center h-40" key={index}>
@@ -70,14 +73,17 @@ function Partners() {
             </div>
           ))}
         </div>
-        <Link
-          to="https://www.open-dreams.org/"
-          target="_blank"
-          className="bg-blue-600 w-fit mx-auto lg:w-fit rounded-full items-center
-           justify-center lg:mx-auto flex  mt-6 py-3 px-10 text-white font-medium"
-        >
-          Become a partner
-        </Link>
+        {/* Link to  */}
+        <div className="flex justify-center mt-6">
+          <Link
+            to="https://www.open-dreams.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 rounded-full py-3 px-10 text-white font-medium text-base hover:bg-blue-700 transition duration-300 ease-in-out"
+          >
+            Become a Partner
+          </Link>
+        </div>
       </div>
     </div>
   );
