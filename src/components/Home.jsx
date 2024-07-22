@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="flex flex-col md:flex-row">
       {/* First section */}
-      <div className="md:flex-grow-0 md:w-1/2 md:ml-10 flex flex-col justify-between">
+      <div className="md:flex-grow-0 md:w-1/2 flex flex-col justify-between">
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-7xl font-bold mb-4">OD@10</h2>
           <p className="text-xl md:text-5xl font-light text-gray-700">
@@ -15,9 +15,16 @@ function Home() {
           </p>
         </div>
         <div className="flex flex-col gap-4 p-4 mb-5 md:p-8 md:mb-0 bg-white shadow-lg rounded-lg text-center md:text-left mt-auto md:items-start">
-    <Link className="text-base md:text-lg text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out underline">Register today and save your spot</Link>
-    <Link to={"/shop"} className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline">Order for a hoody</Link>
-</div>
+          <Link className="text-base md:text-lg text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out underline">
+            Register today and save your spot
+          </Link>
+          <Link
+            to={"/shop"}
+            className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline"
+          >
+            Order for a hoody
+          </Link>
+        </div>
 
         {/* Content */}
         <div className="flex justify-center md:justify-start mt-auto">
