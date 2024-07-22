@@ -119,26 +119,22 @@ function Schedule() {
   );
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center p-4">
       <div className="w-full md:w-auto">
-        <h2 className="text-gray-900 mb-4 text-center md:text-left text-2xl md:text-3xl">
+        <h2 className="text-gray-900 mb-4 text-center md:text-left text-2xl md:text-3xl font-bold">
           Schedule
         </h2>
-        <div className="bg-gray-100 p-2 md:p-3 rounded-full w-full flex-shrink-0 h-15 gap-2 md:gap-10 flex items-center justify-center">
+        <div className="bg-gray-100 p-2 md:p-3 rounded-full w-full flex-shrink-0 gap-2 md:gap-6 flex items-center justify-center">
           {items.map((item, index) => (
             <button
               key={index}
               onClick={() => setSelected(index)}
-              className={`px-4 md:px-12 py-1 md:py-2 rounded-full cursor-pointer outline-0 flex items-center justify-center min-w-[100px] h-[40px] ${
+              aria-label={`Select ${item}`}
+              className={`px-2 md:px-8 py-1 md:py-2 rounded-full cursor-pointer outline-0 flex items-center justify-center min-w-[80px] md:min-w-[100px] h-[40px] md:h-[45px] transition-colors duration-300 ${
                 selected === index
                   ? "bg-blue-500 text-white"
-                  : "text-black border border-transparent"
+                  : "text-black border border-transparent hover:bg-gray-200"
               }`}
-              style={{
-                boxSizing: "border-box",
-                transition: "background-color 0.3s",
-                fontWeight: "normal",
-              }}
             >
               {item}
             </button>
@@ -148,28 +144,18 @@ function Schedule() {
           <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">
             {myAgenda[selected].title}
           </h1>
-          <ul className="list-none">
+          <ul className="list-none p-0">
             {myAgenda[selected].activities.map((activity, index) => (
-              <li key={index} className="whitespace-nowrap">
+              <li key={index} className="whitespace-pre-wrap py-2">
                 <div className="font-bold">{activity.time}: </div>
-
-                {activity.description.includes(",") ? (
-                  activity.description.split(",").map((item, index) => (
-                    <div key={index}>
-                      <span className="text-blue-500 pr-2 inline-block min-w-[20px]">
-                        -
-                      </span>
-                      {item.trim()}
-                    </div>
-                  ))
-                ) : (
-                  <div>
+                {activity.description.split(",").map((item, idx) => (
+                  <div key={idx}>
                     <span className="text-blue-500 pr-2 inline-block min-w-[20px]">
                       -
                     </span>
-                    {activity.description}
+                    {item.trim()}
                   </div>
-                )}
+                ))}
               </li>
             ))}
           </ul>
