@@ -7,18 +7,18 @@ function Home() {
   return (
     <div className="flex flex-col md:flex-row">
       {/* First section */}
-      <div className="md:flex-grow-0 md:w-1/2 flex flex-col gap-5 p-4 md:p-8">
+      <div className="md:flex-grow-0 md:w-1/2 flex flex-col gap-0 p-4 md:p-8">
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-7xl font-bold mb-4">OD@10</h2>
           <p className="text-xl md:text-3xl font-light text-gray-700">
             THEME: <span className="md:text-4xl">CELEBRATING A DECADE OF TRIUMPH</span>
           </p>
-          <p className="flex justify-center md:justify-start items-center gap-4">
+          <p className="flex justify-center md:justify-start items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
             </svg>
-            <span>We invite you all to IRIC, Chapelle Obili Yaoundé to celebrate with us the triumphs of the past 10 years, marked by the hard work and dedication of each team member.</span>
+            <span>We invite you all to IRIC at Obili about 100m from carrefour Obili Yaoundé to celebrate with us the triumphs of the past 10 years, marked by the hard work and dedication of each team member.</span>
           </p>
         </div>
         <div className="flex flex-col gap-4 p-4 mb-5 bg-white shadow-lg rounded-lg text-center md:text-left">

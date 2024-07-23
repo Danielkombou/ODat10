@@ -38,6 +38,7 @@ function Shop() {
               alt={`Hoody ${index + 1}`}
               className="w-full h-full object-contain"
             />
+            <p>Price : 5000xaf</p>
           </div>
         ))}
       </div>
