@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import hoody1 from "../assets/hoody/hoody1.jpg";
 import hoody2 from "../assets/hoody/hoody2.jpg";
@@ -10,8 +10,6 @@ import hoody7 from "../assets/hoody/hoody7.jpg";
 import hoody8 from "../assets/hoody/hoody8.jpg";
 
 function Shop() {
-  const [isHovered, setIsHovered] = useState(null);
-
   const hoodies = [
     {
       img: hoody1,
@@ -75,23 +73,18 @@ function Shop() {
     <div className="p-4">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {hoodies.map((item, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setIsHovered(index)}
-            onMouseLeave={() => setIsHovered(null)}
-            className="relative h-40 w-full rounded-md border border-gray-300 overflow-hidden transition-transform transform hover:scale-105 duration-300"
-          >
-            <img
-              src={item.img}
-              alt={`Hoody ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
-            {isHovered === index && (
-              <div className="absolute inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-center p-2 text-center">
-                <p>{item.description.price}</p>
-                <p>{item.description.size}</p>
-              </div>
-            )}
+          <div key={index} className="flex flex-col items-center">
+            <div className="relative h-40 w-full rounded-md border border-gray-300 overflow-hidden transition-transform transform hover:scale-105 duration-300">
+              <img
+                src={item.img}
+                alt={`Hoody ${index + 1}`}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="p-2 text-center">
+              <p className="text-lg font-semibold flex items-center gap-2"><div className="bg-gray-500 w-1 h-1 rounded-full"/>{item.description.price}</p>
+              <p className="text-sm text-gray-600 flex items-center gap-2"><div className="bg-gray-500 w-1 h-1 rounded-full"/>{item.description.size}</p>
+            </div>
           </div>
         ))}
       </div>
