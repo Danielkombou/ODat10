@@ -23,6 +23,7 @@ const images = [
   odpng7,
   odpng8,
   odpng9,
+  odpng,
 ];
 
 function Slider() {
@@ -41,6 +42,20 @@ function Slider() {
     }
   }, [emblaApi]);
 
+  useEffect(() => {
+    if(emblaApi) {
+      const autoScroll = setInterval(() => {
+        if(emblaApi.canScrollNext()){
+          emblaApi.scrollNext();
+        } else {
+          emblaApi.scrollTo(o);
+        }
+      }, 3000);
+
+      return () =>  clearInterval(autoScroll)
+    }
+  }, [emblaApi])
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -52,7 +67,7 @@ function Slider() {
           ))}
         </div>
       </div>
-      <div className="embla__buttons">
+      <div className="embla__buttons hidden">
         <button onClick={scrollPrev} className="embla__button embla__button--prev">
           &#8249;
         </button>

@@ -7,76 +7,55 @@ function Home() {
   return (
     <div className="flex flex-col md:flex-row">
       {/* First section */}
-      <div className="md:flex-grow-0 md:w-1/2 md:ml-10 flex flex-col justify-between">
+      <div className="md:flex-grow-0 md:w-1/2 flex flex-col gap-0 p-4 md:p-8">
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-7xl font-bold mb-4">OD@10</h2>
-          <p className="text-xl md:text-5xl font-light text-gray-700">
-            CELEBRATING A DECADE OF TRIUMPH
+          <p className="text-xl md:text-3xl font-light text-gray-700">
+            THEME: <span className="md:text-4xl">CELEBRATING A DECADE OF TRIUMPH</span>
+          </p>
+          <p className="flex justify-center md:justify-start items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            <span>We invite you all to IRIC at Obili about 100m from carrefour Obili Yaoundé to celebrate with us the triumphs of the past 10 years, marked by the hard work and dedication of each team member.</span>
           </p>
         </div>
-        <div className="flex flex-col gap-4 p-4 mb-5 md:p-8 md:mb-0 bg-white shadow-lg rounded-lg text-center md:text-left mt-auto md:items-start">
-    <Link className="text-base md:text-lg text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out underline">Register today and save your spot</Link>
-    <Link to={"/shop"} className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline">Order for a hoody</Link>
-</div>
-
-        {/* Content */}
-        <div className="flex justify-center md:justify-start mt-auto">
-          {/* Countdown */}
-          <div className="flex justify-center">
-            <Countdown />
-          </div>
+        <div className="flex flex-col gap-4 p-4 mb-5 bg-white shadow-lg rounded-lg text-center md:text-left">
+          <Link to="/register" className="text-base md:text-lg text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out underline">
+            Register today and save your spot
+          </Link>
+          <Link
+            to="/shop"
+            className="text-sm md:text-xl hover:text-gray-600 text-blue-400 transition duration-300 ease-in-out underline"
+          >
+            Order for a hoody
+          </Link>
+        </div>
+        <div className="flex justify-center md:justify-start mt-1">
+          <Countdown />
         </div>
       </div>
 
-      {/* Vertical Line */}
-      <div className="hidden h-screen md:block my-5" />
-
       {/* Second section */}
-      <div className="md:mt-10 flex flex-[2] flex-col justify-between items-center">
-        <div className="">
-          <Slider />
-        </div>
+      <div className="md:mt-10 flex flex-[2] flex-col items-center">
+        <Slider />
         {/* Footer */}
-        <footer className="w-full p-4 gap-2 text-center flex flex-col md:flex-row items-center justify-end">
+        <footer className="w-full p-4 flex flex-col md:flex-row items-center justify-end gap-4">
           <p className="font-semibold">Follow us on:</p>
-          <div className="flex items-center space-x-4 mt-2 md:mt-0">
-            <Link href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <g clipPath="url(#clip0_1_132)">
-                  <path
-                    d="M16 8.04899C16 3.60299 12.418 -0.00100708 7.99999 -0.00100708C3.57999 -7.08003e-06 -0.00201416 3.60299 -0.00201416 8.04999C-0.00201416 12.067 2.92399 15.397 6.74799 16.001V10.376H4.71799V8.04999H6.74999V6.27499C6.74999 4.25799 7.94499 3.14399 9.77199 3.14399C10.648 3.14399 11.563 3.30099 11.563 3.30099V5.28099H10.554C9.56099 5.28099 9.25099 5.90199 9.25099 6.53899V8.04899H11.469L11.115 10.375H9.24999V16C13.074 15.396 16 12.066 16 8.04899Z"
-                    fill="#1D2939"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_132">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
+          <div className="flex items-center space-x-4">
+            <a href="#" className="text-gray-600 hover:text-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M16 8.04899C16 3.60299 12.418 -0.00100708 7.99999 -0.00100708C3.57999 -7.08003e-06 -0.00201416 3.60299 -0.00201416 8.04999C-0.00201416 12.067 2.92399 15.397 6.74799 16.001V10.376H4.71799V8.04999H6.74999V6.27499C6.74999 4.25799 7.94499 3.14399 9.77199 3.14399C10.648 3.14399 11.563 3.30099 11.563 3.30099V5.28099H10.554C9.56099 5.28099 9.25099 5.90199 9.25099 6.53899V8.04899H11.469L11.115 10.375H9.24999V16C13.074 15.396 16 12.066 16 8.04899Z" fill="#1D2939" />
               </svg>
-            </Link>
-            <Link href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
-                  fill="#1D2939"
-                />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" fill="#1D2939" />
               </svg>
-            </Link>
-            <Link href="#">
-              <svg
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -88,7 +67,7 @@ function Home() {
                   fill="#1D2939"
                 />
               </svg>
-            </Link>
+            </a>
           </div>
         </footer>
       </div>
