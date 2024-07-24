@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import hoody1 from "../assets/hoody/hoody1.jpg";
 import hoody2 from "../assets/hoody/hoody2.jpg";
@@ -8,21 +8,67 @@ import hoody5 from "../assets/hoody/hoody5.jpg";
 import hoody6 from "../assets/hoody/hoody6.jpg";
 import hoody7 from "../assets/hoody/hoody7.jpg";
 import hoody8 from "../assets/hoody/hoody8.jpg";
-// import hoody9 from "../assets/hoody/hoody9.jpg";
-// import hoody10 from "../assets/hoody/hoody10.jpg";
-// import hoody11 from "../assets/hoody/hoody11.jpg";
 
 function Shop() {
+  const [isHovered, setIsHovered] = useState(null);
+
   const hoodies = [
-    hoody1,
-    hoody2,
-    hoody3,
-    hoody4,
-    hoody5,
-    hoody6,
-    hoody7,
-    hoody8,
-    // hoody9,
+    {
+      img: hoody1,
+      description: {
+        price: "5000XAF",
+        size: "XL",
+      },
+    },
+    {
+      img: hoody2,
+      description: {
+        price: "5000XAF",
+        size: "XP",
+      },
+    },
+    {
+      img: hoody3,
+      description: {
+        price: "5000XAF",
+        size: "XXL",
+      },
+    },
+    {
+      img: hoody4,
+      description: {
+        price: "5000XAF",
+        size: "M",
+      },
+    },
+    {
+      img: hoody5,
+      description: {
+        price: "5000XAF",
+        size: "L",
+      },
+    },
+    {
+      img: hoody6,
+      description: {
+        price: "5000XAF",
+        size: "S",
+      },
+    },
+    {
+      img: hoody7,
+      description: {
+        price: "5000XAF",
+        size: "XXXL",
+      },
+    },
+    {
+      img: hoody8,
+      description: {
+        price: "5000XAF",
+        size: "XXS",
+      },
+    },
   ];
 
   return (
@@ -31,14 +77,21 @@ function Shop() {
         {hoodies.map((item, index) => (
           <div
             key={index}
+            onMouseEnter={() => setIsHovered(index)}
+            onMouseLeave={() => setIsHovered(null)}
             className="relative h-40 w-full rounded-md border border-gray-300 overflow-hidden transition-transform transform hover:scale-105 duration-300"
           >
             <img
-              src={item}
+              src={item.img}
               alt={`Hoody ${index + 1}`}
               className="w-full h-full object-contain"
             />
-            <p>Price : 5000xaf</p>
+            {isHovered === index && (
+              <div className="absolute inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-center p-2 text-center">
+                <p>{item.description.price}</p>
+                <p>{item.description.size}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
