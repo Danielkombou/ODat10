@@ -4,8 +4,8 @@ function Contact() {
   return (
     <div className="rounded-sm shadow-lg cursor flex gap-10 justify-around bg-white p-6">
       <div>
-        <h1 className="text-3xl font-semibold">Let's talk</h1>
-        <span className="text-gray-700">Ask us anything</span>
+        <h1 className="text-4xl font-semibold">Let's talk</h1>
+        <span className="text-gray-700 ">Ask us anything</span>
       </div>
       <div className="flex flex-col w-fit p-4 bg-gray-100 rounded-md">
         <form action="">
@@ -31,7 +31,7 @@ function Contact() {
             <label className="font-bold text-gray-900">Message</label>
             <textarea
               placeholder="Hey there, I am..."
-              className="outline-none p-2 rounded-md border border-gray-300"
+              className="outline-none p-2 rounded-md border border-gray-300 resize-none"
               rows="4"
             ></textarea>
           </div>
