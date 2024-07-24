@@ -38,7 +38,7 @@ function Contact() {
             <textarea
               id="message"
               placeholder="Hey there, I am..."
-              className="outline-none p-2 rounded-md border border-gray-300"
+              className="outline-none p-2 rounded-md border border-gray-300 resize-none"
               rows="4"
               aria-required="true"
               aria-label="Message"

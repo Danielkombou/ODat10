@@ -90,7 +90,7 @@ function Shop() {
       </div>
       <div className="flex items-center justify-center my-8">
         <Link
-          to="/order"
+          to="https://docs.google.com/forms/d/e/1FAIpQLSegJGsKTf2PCIcAO6OrxdU3btiuCtzymetKS2e_bhHvJLPZmg/viewform?usp=sf_link"
           aria-label="Order now"
           className="font-semibold hover:text-blue-700 hover:bg-gray-100 transition duration-300 ease-in-out rounded-sm bg-slate-100 p-3 text-blue-500 text-base md:text-lg"
         >
